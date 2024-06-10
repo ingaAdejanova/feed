@@ -1,0 +1,27 @@
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #333;
+  --color-dark-grey: #555;
+  --color-light-grey: #dee2e6;
+  --color-grey: #f8f9fa;
+  --color-blue: #007bff;
+  --color-yellow: #fff9e6;
+  --color-blue: #3498db;
+}
