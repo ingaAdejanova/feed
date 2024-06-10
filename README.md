@@ -1,3 +1,9 @@
+
+
+
+https://github.com/ingaAdejanova/feed/assets/14893038/78130e5a-ede6-4d09-8a25-631083bf3af7
+
+
 # Next.js App with Redux
 
 This project is bootstrapped with Next.js and Redux using the official `with-redux` example:
