@@ -11,7 +11,7 @@ import { Loader } from '../../core/Loader/Loader'
 import styles from './PostList.module.css'
 import { PostListItem } from '../PostListItem/PostListItem'
 
-export const PostList = () => {
+const PostList = () => {
   const dispatch = useAppDispatch()
   const { posts, page, hasMore } = useAppSelector((state) => state.posts)
   const { users } = useAppSelector((state) => state.users)
@@ -83,3 +83,4 @@ export const PostList = () => {
     </InfiniteScroll>
   )
 }
+export default PostList

@@ -49,3 +49,7 @@ This project uses Jest for testing. You can run tests using:
 ```bash
 yarn test
 ```
+
+## Consideration for SWR or RTK query
+
+If cached data, data freshness, and real-time updates are a priority, using a library like SWR, RTK query would be considered for data fetching.

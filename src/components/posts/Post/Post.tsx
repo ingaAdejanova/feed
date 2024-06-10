@@ -12,7 +12,7 @@ type Props = {
   postId: string
 }
 
-export const Post = ({ postId }: Props) => {
+const Post = ({ postId }: Props) => {
   const dispatch = useAppDispatch()
   const { post, isLoading: isPostLoading, error: postError } = useAppSelector((state) => state.post)
   const { user, isLoading: isUserLoading } = useAppSelector((state) => state.user)
@@ -73,3 +73,5 @@ export const Post = ({ postId }: Props) => {
     </div>
   )
 }
+
+export default Post

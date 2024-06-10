@@ -1,5 +1,9 @@
 import React from 'react'
-import { Post } from '@/src/components/posts/Post/Post'
+import dynamic from 'next/dynamic'
+
+const DynamicPost = dynamic(() => import('@/src/components/posts/Post/Post'), {
+  ssr: false,
+})
 
 type Props = {
   params: {
@@ -9,5 +13,5 @@ type Props = {
 
 export default function PostPage({ params }: Props) {
   const { postId } = params
-  return <Post postId={postId} />
+  return <DynamicPost postId={postId} />
 }
