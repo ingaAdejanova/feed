@@ -2,8 +2,11 @@
 
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { useAppDispatch } from '@/src/lib/redux/hooks'
 import { Post } from '@/src/lib/redux/features/posts/postsActions'
 import { User } from '@/src/lib/redux/features/users/usersActions'
+import { resetUser } from '@/src/lib/redux/features/users/userSlice'
+import { resetPost } from '@/src/lib/redux/features/posts/postSlice'
 import { ROUTES } from '@/src/lib/routes'
 import styles from './PostListItem.module.css'
 
@@ -15,8 +18,12 @@ type Props = {
 
 export const PostListItem = ({ post, user, highlightedPostId }: Props) => {
   const router = useRouter()
+  const dispatch = useAppDispatch()
 
   const handlePostClick = (postId: number) => {
+    dispatch(resetPost())
+    dispatch(resetUser())
+
     router.push(`${ROUTES.POSTS}/${postId}`)
   }
   const postContainerClass = highlightedPostId === post.id ? styles.highlightedContainer : styles.container

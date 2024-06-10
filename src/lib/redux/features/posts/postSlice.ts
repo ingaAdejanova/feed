@@ -16,7 +16,11 @@ const initialState: PostState = {
 export const postSlice = createSlice({
   name: 'post',
   initialState,
-  reducers: {},
+  reducers: {
+    resetPost: (state: PostState) => {
+      state.post = null
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchPostById.pending, (state: PostState) => {
@@ -33,5 +37,7 @@ export const postSlice = createSlice({
       })
   },
 })
+
+export const { resetPost } = postSlice.actions
 
 export default postSlice.reducer
